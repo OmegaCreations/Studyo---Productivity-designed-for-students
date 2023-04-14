@@ -8,7 +8,7 @@ import { useRouter } from 'expo-router';
 import { COLORS, SIZES, icons } from '../../../constants';
 import styles from './routinecards.style';
 
-const RoutineCards = ({ routines }) => {
+const RoutineCards = ({ routines, handleCardPress }) => {
 
     const router = useRouter();
     
@@ -28,7 +28,10 @@ const RoutineCards = ({ routines }) => {
                 renderItem={({ item, index }) => (
                     <TouchableOpacity
                         style={styles.card(completed[index])}
-                        onPress={() => handleComplete(index)}
+                        onPress={() => {
+                            handleComplete(index);
+                        
+                        }}
                     >
                         <View
                             style={{
@@ -63,9 +66,10 @@ const RoutineCards = ({ routines }) => {
                                     </Text>
                                 )}
                         </View>
+
                         <Text style={styles.titleSecondary}>{item}</Text>
 
-                        <TouchableOpacity style={styles.cardBtn}>
+                        <TouchableOpacity style={styles.cardBtn} onPress={() => handleCardPress(item)}>
                             
                                 {item == "Setup pomodoro timer" ? (
                                     <Text style={{color: COLORS.secondary}}>
