@@ -1,6 +1,8 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 import { COLORS, SIZES, FONT } from '../../constants';
+
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
 
@@ -31,6 +33,39 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     shadowColor: COLORS.white,
     padding: SIZES.large
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.secondary,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  progressText: {
+    fontSize: 60,
+    fontFamily: FONT.medium,
+    color: COLORS.tertiary,
+    width: 200,
+    marginBottom: 140,
+    textAlign: 'center',
+  },
+  
+  button: {
+    position: 'absolute',
+    bottom: 120,
+    width: width * 0.7,
+    height: 60,
+    backgroundColor: COLORS.tertiary,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  buttonText: {
+    fontSize: 25,
+    color: 'white',
+    letterSpacing: 2.0,
   },
 
   

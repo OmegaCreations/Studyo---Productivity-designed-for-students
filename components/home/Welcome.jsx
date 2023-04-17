@@ -16,7 +16,7 @@ const Welcome = () => {
         if(item != routines[2])
         router.push(`/more-info/${item}`);
         else 
-        router.push(`/timers/Pomodoro`);
+        router.push(`timers/Pomodoro`);
     }
 
     return(

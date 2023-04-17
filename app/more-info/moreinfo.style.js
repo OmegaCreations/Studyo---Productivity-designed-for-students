@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
+    marginHorizontal: 20,
+    marginTop: 20,
   },
   titleTertiary: {
     fontFamily: FONT.bold,

@@ -6,7 +6,7 @@ import { Stack, useRouter, useSearchParams } from 'expo-router';
 
 import styles from './moreinfo.style';
 import { COLORS, FONT, SIZES, icons, images } from '../../constants';
-import { ScreenHeaderBtn } from '../../components';
+import { PreparationTips, ScreenHeaderBtn } from '../../components';
 
 const MoreInfo = () => {
     const params = useSearchParams();
@@ -37,17 +37,17 @@ const MoreInfo = () => {
             }}
         />
         
-        <ScrollView
-            showsVerticalScrollIndicator={false}
-        >
-            <View
-                style={styles.container}
-            >
+        
 
-                <Text style={styles.titleSecondary}>{params.id}</Text>
+        <Text style={styles.titleSecondary}>{params.id}</Text>
 
-            </View>
-        </ScrollView>
+        {params.id == "Environment setup" ? (
+            <PreparationTips />
+        ) : (
+            <Text>Test</Text>
+        )}
+
+            
 
         </SafeAreaView>
     )
