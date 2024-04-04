@@ -42,7 +42,7 @@ const PreparationTips = () => {
       updatedCompletedPoints.push(currentPointIndex);
     }
     setCompletedPoints(updatedCompletedPoints);
-    handleNextPoint();
+
   };
 
   const isCurrentPointCompleted = completedPoints.includes(currentPointIndex);
@@ -58,7 +58,7 @@ const PreparationTips = () => {
             ></View>
         
 
-      <View style={styles.tipContainer}>
+      <View style={styles.tipContainer}> 
         <Text
           style={styles.enumerate}
         >{currentPointIndex + 1}/{points.length}</Text>

@@ -63,9 +63,9 @@ const Pomodoro = () => {
     const onPress = useCallback(() => {
 
         if(progress.value == 1){
-            progress.value = withTiming(0, {duration: duration, easing: Easing.linear})
+            progress.value = withTiming(0, {duration: 500, easing: Easing.linear})
         } else if (progress.value == 0) {
-            progress.value = withTiming(1, {duration: 500, easing: Easing.linear})
+            progress.value = withTiming(1, {duration: duration, easing: Easing.linear})
         }
         // TODO : STOP TIMER 
     }, []);
